@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-github',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
+  user;
 
-  constructor() { }
+  constructor(private getData: DataService) { 
+  }
 
   ngOnInit(): void {
   }
