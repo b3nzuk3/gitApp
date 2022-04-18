@@ -9,10 +9,14 @@ import { DataService } from '../data.service';
 export class GithubComponent implements OnInit {
   user;
 
-  constructor(private getData: DataService) { 
+  constructor(private getData: DataService) {
   }
 
   ngOnInit(): void {
+    this.getData.getUser()
+    .subscribe((response)=>{
+      console.log('Data',response);
+    });
   }
 
 }
