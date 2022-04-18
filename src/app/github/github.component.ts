@@ -8,15 +8,22 @@ import { DataService } from '../data.service';
 })
 export class GithubComponent implements OnInit {
   user;
+  repos;
 
   constructor(private getData: DataService) {
   }
 
   ngOnInit(): void {
     this.getData.getUser()
-    .subscribe((response)=>{
-      console.log('Data',response);
-    });
+      .subscribe(user => {
+        this.user=user;
+      });
+
+      this.getData.getRepos()
+        .subscribe(repos => {
+          this.repos=repos;
+          console.log(this.repos);
+        });
   }
 
 }
