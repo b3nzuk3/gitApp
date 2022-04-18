@@ -1,6 +1,18 @@
+body{
+  background-color: #DDDDDD;
+}
+p{
+  padding: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 2rem;
+}
+
 .search{
   max-width: 600px;
   margin:30px auto;
   text-align: center;
   font-size:18px;
+}
+.git_png{
+  padding:30px;
 }
