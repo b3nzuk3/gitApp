@@ -4,8 +4,8 @@ img{
   width: 100px;
 }
 .text{
-  position: fixed;
-  right:45px;
+  position:relative;
+  left:170px;
   padding-top: 40px;
 }
 p{
