@@ -1,8 +1,9 @@
-<div class="row search-bar">
+<div class="row">
   <div class='col-md-12'>
     <form>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Github username" />
+      <div style="width:50rem;" class="form-group">
+        <input  type="text" class="form-control" placeholder="Github username" [(ngModel)]="username" name="username" (keyup
+        )="search()" />
 
   </div>
   </form>
@@ -57,8 +58,8 @@
                  <p>{{repo.description}}</p>
                </div>
                <div class="col-md-3">
-                 <span class="label label-primary">{{repo.watchers}} Watchers</span>
-                 <span class="label label-success">{{user.forks}} Forks</span>
+                 <span class="btn btn-primary">{{repo.watchers}} Watchers</span>
+                 <span class="btn btn-success">{{user.forks}} Forks</span>
                </div>
              </div>
              <hr>

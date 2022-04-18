@@ -9,21 +9,31 @@ import { DataService } from '../data.service';
 export class GithubComponent implements OnInit {
   user;
   repos;
+  username;
 
   constructor(private getData: DataService) {
+    this.user = false
   }
+
 
   ngOnInit(): void {
+
+  }
+
+  search() {
+    this.getData.updateUsername(this.username);
     this.getData.getUser()
       .subscribe(user => {
-        this.user=user;
+        this.user = user;
+        console.log(this.user)
       });
 
-      this.getData.getRepos()
-        .subscribe(repos => {
-          this.repos=repos;
-          console.log(this.repos);
-        });
+    this.getData.getRepos()
+      .subscribe(repos => {
+        this.repos = repos;
+        console.log(this.repos);
+      });
   }
+
 
 }

@@ -12,12 +12,18 @@ export class DataService {
     console.log('run for your life')
   }
 
-  getUser(){
-    return this.http.get('https://api.github.com/users/'+this.username) ;
+
+
+  getUser() {
+    return this.http.get('https://api.github.com/users/' + this.username);
   }
 
-  getRepos(){
-    return this.http.get('https://api.github.com/users/'+this.username+'/repos') ;
+  getRepos() {
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos');
   }
+  updateUsername(username:any){
+    this.username=username;
+  }
+
 
 }
