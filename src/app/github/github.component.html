@@ -3,22 +3,24 @@
 </div>
 
 <div class="text-center">
-  <p>Please enter your github username to access your Profile and Repositories</p>
+  <p class="p_description">Please enter your github username to access your Profile and Repositories</p>
 </div>
+<div class="container">
+  <div class="row">
+    <div class='col-md-12'>
+      <form>
+        <div class="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Github username" [(ngModel)]="username" name="username" (keyup)="search()" />
 
-<div class="row">
-  <div class='col-md-12'>
-    <form>
-      <div class="search">
-        <div class="form-group">
-          <input  type="text" class="form-control" placeholder="Github username" [(ngModel)]="username" name="username" (keyup)="search()" />
+          </div>
+        </div>
 
+      </form>
     </div>
-      </div>
+  </div>
+</div>
 
-  </form>
-</div>
-</div>
 
 
 
@@ -36,6 +38,10 @@
           <img class="" src="{{user.avatar_url}}" class="card-img-top" alt="...">
         </div>
         <div *ngIf="user" class="col-md-8">
+          <div class="stats">
+            <span class="label label-primary"> {{user.public_repos}}</span>
+
+          </div>
           <ul>
             <li class="list-group-item"><strong>Username: </strong> {{user.login}}</li>
             <li class="list-group-item"><strong>Location: </strong> {{user.location}}</li>
@@ -47,36 +53,36 @@
       </div>
     </div>
   </div>
- </div>
+</div>
 
 
+<br>
 
+<div *ngIf="user" class="container">
+  <div class="card" style="width: 50rem;">
 
- <div *ngIf="user" class="container">
-   <div class="card" style="width: 50rem;">
+    <div class="card-header">
+      <h3>{{user.name}}s Repos</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div *ngFor="let repo of repos">
+            <div class="row">
+              <div class="col-md-9">
+                <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                <p>{{repo.description}}</p>
+              </div>
+              <div class="col-md-3">
+                <span class="btn btn-primary">{{repo.watchers}} Watchers</span>
+                <span class="btn btn-success">{{user.forks}} Forks</span>
+              </div>
+            </div>
+            <hr>
 
-     <div class="card-header">
-       <h3>{{user.name}}s Repos</h3>
-     </div>
-     <div class="card-body">
-       <div class="row">
-         <div class="col-md-12">
-           <div *ngFor="let repo of repos">
-             <div class="row">
-               <div class="col-md-9">
-                 <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
-                 <p>{{repo.description}}</p>
-               </div>
-               <div class="col-md-3">
-                 <span class="btn btn-primary">{{repo.watchers}} Watchers</span>
-                 <span class="btn btn-success">{{user.forks}} Forks</span>
-               </div>
-             </div>
-             <hr>
-
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

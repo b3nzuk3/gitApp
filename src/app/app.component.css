@@ -4,8 +4,8 @@ img{
   width: 100px;
 }
 .text{
-  position:relative;
-  left:170px;
+  position: fixed;
+  right:45px;
   padding-top: 40px;
 }
 p{
@@ -27,4 +27,7 @@ p{
   50%  { left:100px; top:100px;}
   75%  { left:0px; top:100px;}
   100% { left:0px; top:0px;}
+}
+a{
+  color: #121212;
 }
