@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 #### By b3nzuk3
 ## Description
 This app allows the user to view his profile and repositories when prompted to search
+
+![LANDING PAGE](git_Screen.png)
 ## Setup/Installation Requirements
 Once you access the Webpage, you click on the github link on the right of the navbar and you will be able to access the App.
 ## Other Projects
@@ -38,4 +40,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
